@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "preview": "vite preview --port 8080"
   },
   "dependencies": {
     "@emotion/react": "^11.4.0",
