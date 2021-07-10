@@ -6,10 +6,15 @@ import ImageList from './ImageList'
 function App() {
   const [state, setState] = useState({ images: [] })
 
+  const randomPage = (max) => {
+    return Math.floor(Math.random() * max)
+  }
+
   const onSearchSubmit = async (input) => {
     const res = await unsplash.get('/search/photos', {
       params: {
-        query: input
+        query: input,
+        page: randomPage(20)
       }
     })
     setState({ images: res.data.results })
