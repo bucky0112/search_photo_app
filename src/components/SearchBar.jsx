@@ -19,6 +19,7 @@ const SearchBar = (props) => {
         <div className='field'>
           <label htmlFor='search'>Search</label>
           <input
+            placeholder='Search photos'
             id='search'
             type='text'
             value={state.inputText}
